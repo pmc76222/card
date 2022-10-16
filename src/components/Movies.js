@@ -11,9 +11,7 @@ function Movies({id,이름,이미지}) {
     
     return(
         <div key={id}>
-        <Link to='/about'      
-                 
-        >            
+        <Link to="/about" state={{id,이름,이미지}}>            
         <h1>{이름}</h1>
         <h2>{이미지}</h2>
         </Link>       
