@@ -8,8 +8,11 @@ function About() {
     const { id, 이름, 이미지} = location.state;    
     console.log(location);    
     return (
-
-        <h1>About component 상세페이지!</h1>
+        <>
+        <h1>{id} 상세페이지!{id}</h1>
+        <h1>{이름}</h1>
+        <h1>{이미지}</h1>
+        </>
     )
 }
 
