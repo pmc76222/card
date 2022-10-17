@@ -9,10 +9,12 @@ function Movies({id,이름,이미지}) {
     
     return(        
         <div key={id}>
-        <Link to="/about" state={{id,이름,이미지}}>            
-        <h1>{이름}</h1>
-        <h2>{이미지}</h2>
-        </Link>       
+        <figure class='fig'>   
+        <Link to="/about" state={{id,이름,이미지}}>   
+        <img class='card' src={이미지} alt={이름}/>         
+        <figcaption class='font'>{이름}</figcaption>
+        </Link> 
+        </figure>      
         </div>         
     )   
 }

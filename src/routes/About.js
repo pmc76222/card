@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
 function About() {
@@ -11,7 +11,7 @@ function About() {
         <>
         <h1>{id} 상세페이지!{id}</h1>
         <h1>{이름}</h1>
-        <h1>{이미지}</h1>
+        <img src={이미지} alt={이름}/>
         </>
     )
 }
