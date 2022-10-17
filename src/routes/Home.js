@@ -1,6 +1,5 @@
 import Movies from "../components/Movies.js";
-
-
+import Masonry from 'react-masonry-css';
 
 function Home() {       
 
@@ -11,17 +10,30 @@ function Home() {
         {id:4, 이름:"게임4", 이미지:"그림4"}
     ]       
 
+    const breakpointColumnsObj = {
+        default: 5,
+        1100: 3,
+        700: 2,
+        500: 1
+    };
+   
     return ( 
        <div> 
-            {ilikes.map((item) => (            
-            
-            <Movies 
-                key={item.id}
-                id={item.id}
-                이름={item.이름}
-                이미지={item.이미지}                 
-            />         
-            ))}     
+            <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+            >
+                {ilikes.map((item) => (                 
+                        
+                <Movies 
+                    key={item.id}
+                    id={item.id}
+                    이름={item.이름}
+                    이미지={item.이미지}                 
+                />         
+                ))}  
+            </Masonry>   
         </div>
     );
 }
